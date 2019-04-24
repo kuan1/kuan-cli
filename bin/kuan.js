@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const program = require('commander')
-const { create, git } = require('../src')
+const create = require('../lib')
 
 program
   .version(require('../package').version, '-v, --version')
@@ -12,8 +12,7 @@ program
   })
 
 program.command('test').action(() => {
-  const res = git.repository()
-  console.log('remote repostory: ', res)
+  console.log('test success!')
 })
 
 program.parse(process.argv)

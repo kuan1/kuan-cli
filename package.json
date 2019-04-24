@@ -4,7 +4,7 @@
   "description": "study vue cli",
   "main": "index.js",
   "bin": {
-    "kuan-cli": "kuan.js"
+    "kuan": "./bin/kuan.js"
   },
   "scripts": {
     "c": "kuan create kuan1/temp my-project",

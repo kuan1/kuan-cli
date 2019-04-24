@@ -21,4 +21,6 @@ test/mysql.js
 
 package-lock.json
 
+/my-project
+
 .temp
