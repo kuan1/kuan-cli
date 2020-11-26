@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "study vue cli",
   "main": "index.js",
-  "bin": {
-    "kuan-cli": "./bin/kuan-cli"
-  },
   "scripts": {
-    "dev": "node example",
-    "dev2": "node bin/kuan-cli init dist/cc -r https://github.com/kuan1/kuan-vue-waterfall.git -b master -d lib",
+    "dev": "bin/kuan-cli.js init dist -b dev -d rollup-typescript",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "kuan-cli": "bin/kuan-cli.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +28,7 @@
     "fs-extra": "^9.0.1",
     "globby": "^11.0.1",
     "inquirer": "^7.3.3",
-    "isbinaryfile": "^4.0.6"
+    "isbinaryfile": "^4.0.6",
+    "ora": "^5.1.0"
   }
 }

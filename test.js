@@ -1,3 +1,5 @@
-const path = require('path')
+const fs = require("fs")
 
-console.log(path.basename('/aaa/bb/bb'))
+fs.readdirSync('lib').forEach(item => {
+  console.log(item)
+})
