@@ -4,10 +4,11 @@
   "description": "study vue cli",
   "main": "index.js",
   "bin": {
-    "kuan": "./bin/kuan.js"
+    "kuan-cli": "./bin/kuan-cli"
   },
   "scripts": {
     "dev": "node example",
+    "dev2": "node bin/kuan-cli init dist/cc -r https://github.com/kuan1/kuan-vue-waterfall.git -b master -d lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
