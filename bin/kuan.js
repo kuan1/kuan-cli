@@ -1,20 +1,35 @@
 #!/usr/bin/env node
-
 const program = require('commander')
-const create = require('../lib')
+const cli = require('../lib/cli')
 
 program
   .version(require('../package').version, '-v, --version')
-  .command('create <remote> <name>')
-  .description('generate a project from a remote template (legacy API)')
-  .action((remote, name) => {
-    create(remote, name.replace(/[\/:]/g, '-'))
+
+/**
+ * 快速创建模板
+ * kuan-cli create . -t zhongkuan/kuan-boilerplate -b dev -d rollup-typescript
+ * kuan-cli create . -t https://gitee.com/zhongkuan/kuan-boilerplate.git -b dev -d rollup-typescript
+ */
+program
+  .command('init <app-name>')
+  .description('ejs模板快速创建项目')
+  .option('-r, --repository <repository>', 'github/gitee仓库名称', 'zhongkuan/kuan-boilerplate|gitee')
+  .option('-b, --branch <branch-name>', '仓库分支名称')
+  .option('-d, --dir <dir>', '二级目录')
+  .option('-p, --platform <gitee|github>', 'gitee')
+  .option('-f, --force', '是否删除缓存，强制更新', true)
+  .action((appName, options) => {
+    const name = appName.replace(/[\/:]/g, '-')
+    const { repository = '', branch = '', dir = '', platform = '', force = false } = options
+    cli.init({ name, repository, branch, dir, platform })
   })
 
-program.command('test').action(() => {
-  console.log('test success!')
-})
+program
+  .command('test')
+  .description('test-test')
+  .action(() => {
+    console.log('test success!')
+  })
 
 program.parse(process.argv)
 
-if (program.args.length < 1) return program.help()
