@@ -10,6 +10,12 @@
   "bin": {
     "kuan-cli": "bin/kuan-cli.js"
   },
+  "files": [
+    "lib",
+    "bin",
+    "package.json",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kuan1/kuan-cli.git"
