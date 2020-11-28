@@ -2,8 +2,7 @@
 const program = require('commander')
 const cli = require('../lib/cli')
 
-program
-  .version(require('../package').version, '-v, --version')
+program.version(require('../package').version, '-v, --version')
 
 /**
  * 快速创建模板
@@ -25,6 +24,13 @@ program
   })
 
 program
+  .command('genPkg')
+  .description('生成package.json')
+  .action(() => {
+    cli.genPkg()
+  })
+
+program
   .command('test')
   .description('test-test')
   .action(() => {
@@ -32,4 +38,3 @@ program
   })
 
 program.parse(process.argv)
-
