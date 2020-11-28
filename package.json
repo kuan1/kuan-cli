@@ -1,6 +1,6 @@
 {
   "name": "kuan-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "一个简陋脚手架，个人练习项目，不建议其他人使用",
   "main": "lib/cli",
   "scripts": {
