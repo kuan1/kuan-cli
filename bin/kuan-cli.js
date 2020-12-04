@@ -7,8 +7,8 @@ program
 
 /**
  * 快速创建模板
- * kuan-cli init . -r zhongkuan/kuan-boilerplate -b dev -d rollup-typescript
- * kuan-cli init . -r https://gitee.com/zhongkuan/kuan-boilerplate.git -b dev -d rollup-typescript
+ * kuan-cli init . -r zhongkuan/kuan-boilerplate -b master -d rollup-ts
+ * kuan-cli init . -r https://gitee.com/zhongkuan/kuan-boilerplate.git -b master -d rollup-ts
  */
 program
   .command('init <app-name>')

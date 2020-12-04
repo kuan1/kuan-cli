@@ -4,7 +4,7 @@
   "description": "study vue cli",
   "main": "index.js",
   "scripts": {
-    "dev": "bin/kuan-cli.js init dist -b dev -d rollup-typescript",
+    "dev": "bin/kuan-cli.js init dist -d rollup-ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
