@@ -36,5 +36,9 @@
     "inquirer": "^7.3.3",
     "isbinaryfile": "^4.0.6",
     "ora": "^5.1.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }
