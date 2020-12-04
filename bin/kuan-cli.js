@@ -16,7 +16,7 @@ program
   .option('-b, --branch <branch-name>', '仓库分支名称')
   .option('-d, --dir <dir>', '二级目录')
   .option('-p, --platform <gitee|github>', 'gitee或者github', 'gitee')
-  .option('-f, --force', '是否删除缓存，强制更新', true)
+  .option('-f, --force', '是否删除缓存，强制更新', false)
   .action((appName, options) => {
     const name = appName.replace(/[\/:]/g, '-')
     const { repository = '', branch = '', dir = '', platform = '', force = false } = options
